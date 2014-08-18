@@ -30,11 +30,11 @@ static inline prn_snip *prn_snip_fetch_internal(zval *zv TSRMLS_DC)
 		-1, prn_snip_rsrc_name, NULL, 1, le_grn_snip);
 }
 
-static inline zval *prn_snip_zval(zval *zv, grn_snip *snip,
+static inline zval *prn_snip_zval(zval *zv, grn_obj *snip,
 	int ctx_id, grn_ctx *ctx TSRMLS_DC)
 {
 	return prn_resource_zval(zv, snip, le_grn_snip,
-		ctx_id, ctx, (prn_resource_dtor)grn_snip_close TSRMLS_CC);
+		ctx_id, ctx, (prn_resource_dtor)grn_obj_close TSRMLS_CC);
 }
 
 /* }}} */

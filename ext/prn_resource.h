@@ -63,7 +63,7 @@ typedef struct {
 	union {
 		void *ptr;
 		grn_obj *obj;
-		grn_snip *snip;
+		grn_obj *snip;
 		grn_hash *hash;
 		grn_hash_cursor *hash_cursor;
 		grn_array *array;
@@ -88,8 +88,8 @@ typedef struct {
 	int type;
 	int ctx_id;
 	grn_ctx *ctx;
-	grn_snip *snip;
-	grn_rc (*dtor)(grn_ctx *ctx, grn_snip *snip);
+	grn_obj *snip;
+	grn_rc (*dtor)(grn_ctx *ctx, grn_obj *snip);
 } prn_snip;
 
 typedef struct {
