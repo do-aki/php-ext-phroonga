@@ -50,7 +50,7 @@ PHPAPI grn_obj *_prn_obj_fetch(zval *zv TSRMLS_DC);
 #define prn_obj_fetch(zv) _prn_obj_fetch((zv) TSRMLS_CC)
 
 PHPAPI int prn_get_le_snip(void);
-PHPAPI grn_snip *_prn_snip_fetch(zval *zv TSRMLS_DC);
+PHPAPI grn_obj *_prn_snip_fetch(zval *zv TSRMLS_DC);
 #define prn_snip_fetch(zv) _prn_snip_fetch((zv) TSRMLS_CC)
 
 PHPAPI int prn_get_le_hash(void);

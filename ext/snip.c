@@ -25,7 +25,7 @@ PHPAPI int prn_get_le_snip(void)
 /* }}} */
 /* {{{ _prn_snip_fetch() */
 
-PHPAPI grn_snip *_prn_snip_fetch(zval *zv TSRMLS_DC)
+PHPAPI grn_obj *_prn_snip_fetch(zval *zv TSRMLS_DC)
 {
 	prn_snip *psnip = prn_snip_fetch_internal(zv TSRMLS_CC);
 
